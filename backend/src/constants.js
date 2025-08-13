@@ -1,0 +1,1 @@
+export const DB_NAME = 'code of duty: azadi ops';
