@@ -3,7 +3,6 @@
 import styles from "./Navbar.module.css"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-// import { useUser } from "@/app/context/UserContext"
 
 export default function Navbar({children}) {
 
@@ -21,9 +20,7 @@ export default function Navbar({children}) {
                         About Us
                     </Link>
                 </ul>
-                <div>
-                    {/* <img src="/Welcome to(1).png" alt="" className={styles.welcome}/> */}
-                </div>
+               
             </nav>
             {children}
             </div>
