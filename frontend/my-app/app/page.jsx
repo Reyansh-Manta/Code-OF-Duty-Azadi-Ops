@@ -5,28 +5,16 @@ import { useState , useEffect } from "react"
 
 export default function HomePage() {
   const [timeout, setTime] = useState(false)
-  const [timeout2, setTime2] = useState(false)
 
 useEffect(() => {
   const timer = setTimeout(()=>{
     setTime(true)
-  },5444)
-
-  return () => {
-    clearTimeout(timer)
-  }
-}, [])
-
-useEffect(() => {
-  const timer = setTimeout(()=>{
-    setTime2(true)
   },7444)
 
   return () => {
     clearTimeout(timer)
   }
 }, [])
-
 
   return(
     <>

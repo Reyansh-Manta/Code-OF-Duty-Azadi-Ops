@@ -34,7 +34,7 @@
 .wtr{
     /* font-size: 100; */
     /* color: wheat; */
-    animation: growtext 4.5s ease forwards;
+    animation: growtext 4.8s ease forwards;
     /* position: absolute;
     bottom: 1vh;
     left: 17vw; */
@@ -42,7 +42,7 @@
 }
 
 .logag{
-    animation: growtext1 0.61s ease forwards;
+    animation: growtext1 1s ease forwards;
     /* position: absolute; */
     /* bottom: 1vh; */
     /* left: 17vw; */
