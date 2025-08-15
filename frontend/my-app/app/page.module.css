@@ -1,5 +1,5 @@
 .bgimage {
-    opacity: 0.8;
+    opacity: 1;
     position: fixed;
     z-index: -1;
     width: 100%;
@@ -50,7 +50,7 @@
 
 .writbefore{
     position: relative;
-    /* top: 50px; */
+    top: 250px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

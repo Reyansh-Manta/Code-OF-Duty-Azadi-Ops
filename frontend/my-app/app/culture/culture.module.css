@@ -3,14 +3,14 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100vw;
-    font-size: large;
-    font-weight: bold;
+    font-size: larger;
+    font-weight: bolder;
     margin: 15px;
 }
 
 .main{
     position: relative;
-    /* top: 85px; */
+    top: 90px;
 }
 
 .p1{

@@ -14,7 +14,7 @@
     box-shadow: 0 1px 5px;
     display: flex;
     position: fixed;
-    bottom: 0px;
+    top: 0px;
     font-size: larger;
     padding: 0px;
     justify-content: flex-start;

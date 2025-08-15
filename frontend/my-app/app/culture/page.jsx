@@ -2,12 +2,14 @@
 
 import Navbar from "../components/Navbar/page"
 import styles from "./culture.module.css"
+import Navag from "../components/Navag/page"
+import Footer from "../components/Footer/page"
 
 export default function Culture() {
     return (
         <>
         <img src="/Untitled design.png" alt="" className={styles.culback}/>
-            <Navbar />
+            <Navag />
             <div className={styles.main}>
                 
             
@@ -17,9 +19,15 @@ export default function Culture() {
                 </div>
                 <div className={styles.culture1}>
                     <img src="/apple.jpg" alt="" style={{ width: "30vw", position: "relative", right: "10px" }} />
-                    <p className={styles.p2}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.Debitis voluptas expedita impedit ipsum molestias est, dolores quasi esse autem modi consequatur sint eos provident eveniet earum rerum deserunt iure inventore atque ea deleniti? Rem necessitatibus fugiat sequi nihil hic iste dignissimos harum reprehenderit! Facilis ab beatae odio praesentium quaerat sit voluptas voluptates nemo obcaecati doloremque, distinctio vel pariatur numquam nisi laudantium dolorem maxime possimus neque. Fugit incidunt enim eum, maiores explicabo eligendi minima ipsam aliquid consectetur saepe velit corrupti odio earum pariatur laborum libero, optio, placeat officiis quas nemo voluptatibus eaque tenetur sint debitis. Unde quisquam, quas culpa molestiae illum nesciunt. Commodi asperiores natus repudiandae illo nam earum, quisquam aspernatur? Ducimus iusto iure a corporis magnam, maiores ut dicta natus provident officia obcaecati ab qui quidem impedit cum perspiciatis. Enim consequatur quis facere quisquam porro impedit ipsa ea inventore, aspernatur alias eius earum voluptatum laudantium nam libero maiores obcaecati repudiandae suscipit. Iusto enim vero sequi natus, recusandae tenetur deleniti animi dicta ullam repellat fuga eligendi et voluptatem, eveniet laborum saepe hic quas quod placeat nulla ipsam earum, reprehenderit ea suscipit! Deserunt quo in mollitia cumque facere recusandae delectus fuga praesentium quibusdam, quae repellat culpa labore perferendis vero totam debitis corporis accusantium tempora? Incidunt sapiente eligendi mollitia commodi tempore sed quo repellendus eum totam est. A maxime necessitatibus sunt perspiciatis odio? Quis nam quas quo earum rem dolore adipisci. Assumenda unde, hic dolore nihil obcaecati, accusamus repudiandae animi beatae iusto doloremque, consequatur reiciendis saepe possimus molestias eum dolores debitis quis voluptatum id sunt at voluptate. Ratione eveniet quia dolore necessitatibus beatae omnis cupiditate, aliquam, tempore esse, tenetur ut vel odio aspernatur obcaecati eligendi exercitationem! Eius dolor neque, suscipit quasi odit necessitatibus autem reprehenderit voluptatem ab atque illum rerum nostrum tempora! Odio minus itaque tempore blanditiis sed quam in quas deserunt? Veritatis debitis quis inventore in minus enim vero quo, tempora laboriosam dolorem pariatur sed facilis vitae nam reprehenderit officiis adipisci vel autem! Adipisci ad similique hic cum perspiciatis mollitia fuga a quibusdam, nobis perferendis ducimus dicta corrupti quasi ea laudantium ut magni sunt. In expedita cum vitae architecto est veniam magnam magni esse, commodi deleniti non! Nisi quae sequi rem atque magnam cum tempora consequuntur rerum suscipit, quas, deleniti labore. Minima suscipit blanditiis repellendus harum doloremque fugiat tenetur dolor, itaque incidunt animi voluptatem, ad voluptate modi corporis perspiciatis, ex consectetur quam id asperiores laborum ratione provident voluptates ullam. Doloribus, deleniti animi?</p>
+                    <p className={styles.p2}>Apples are the lifeblood of Rohru’s economy, identity, and pride. The region’s unique microclimate—cool summers, snowy winters, and fertile alluvial soil—creates apples of exceptional taste, color, and shelf life, making them highly sought after in markets nationwide. For locals, apple cultivation is not just farming; it’s a heritage passed down like an heirloom. Families teach children how to graft saplings, manage orchards, and recognize the perfect harvest time. Apple season, typically from August to October, transforms Rohru into a bustling trade zone: trucks line the roads, apple boxes stack high in courtyards, and commission agents, traders, and laborers converge from different states. This period also brings a festive spirit—neighbors help each other during peak harvest, tea stalls buzz with conversations about market rates, and the air smells faintly of ripe fruit. Over the decades, apple cultivation has modernized with cold storage units, improved varieties, and scientific orchard management, yet the heart of the trade still beats with tradition and community trust.</p>
+                </div>
+
+                <div className={styles.culture1}>
+                    <p className={styles.p1}>Rohru is a serene yet adventurous gateway to the lesser-explored side of Himachal Pradesh, offering a perfect blend of natural beauty, cultural charm, and outdoor activities. The town is surrounded by lush apple orchards, dense deodar forests, and snow-capped peaks, making it a year-round destination for nature lovers. The crystal-clear Pabbar River is famous for trout fishing, attracting anglers from across the country, while trekking routes like the Chandernahan Lake trek lead to pristine high-altitude glacial lakes and meadows bursting with wildflowers. In winter, nearby slopes turn into snow-laden playgrounds for skiing and snow hiking. Traditional fairs, local temples, and bustling village markets allow visitors to experience the authentic Himachali way of life. Unlike crowded hill stations, Rohru offers a quieter, more personal travel experience—ideal for those who wish to slow down, breathe in the mountain air, and truly connect with the land and its people.</p>
+                    <img src="/1.webp" alt="" style={{ width: "30vw", position: "relative", right: "15px" }} />
                 </div>
                 </div>
+                
             </>
             )
 }

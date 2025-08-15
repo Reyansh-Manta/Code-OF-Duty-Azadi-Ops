@@ -1,17 +1,16 @@
 "use client"
 
-import styles from "./Navbar.module.css"
+import styles from "./footer.module.css"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-export default function Navbar({children}) {
+export default function Navag({children}) {
 
         return (
-            <div style={{opacity: "0.9"}}>
+            <div style={{opacity: "1"}}>
+            {children}
             <nav className={styles.nav}>
-                <a href="/">
-                    <img src="/My.png" alt="logo" style={{height: "81px" , top:"10px", position: "relative"}}/>
-                </a>
+                <img src="/w t.png" alt="" style={{height: "100px" , position: "relative", marginRight: "53vw"}}/>
                 <ul className={styles.list}>
                     <Link className={`${styles.culture} ${styles.link}`} href={"/culture"}>
                         Culture
@@ -25,8 +24,6 @@ export default function Navbar({children}) {
                 </ul>
                
             </nav>
-            {children}
             </div>
         )
     }
-   
