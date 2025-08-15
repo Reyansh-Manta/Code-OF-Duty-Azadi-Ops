@@ -15,8 +15,8 @@ export default function Footer({children}) {
                     <Link className={`${styles.culture} ${styles.link}`} href={"/culture"}>
                         Culture
                     </Link>
-                    <Link className={`${styles.fairs} ${styles.link}`} href={"/fairs"}>
-                        Fairs
+                    <Link className={`${styles.fairs} ${styles.link}`} href={"/events"}>
+                        Events
                     </Link>
                     <Link className={`${styles.about} ${styles.link}`} href={"/aboutus"}>
                         About Us

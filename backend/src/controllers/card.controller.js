@@ -27,7 +27,7 @@ const createPost = asyncHandler(async (req, res) => {
         throw new ApiError(402 , "Please provide content image")
     }
     if (!coverimglocalpath) {
-        throw new ApiError(402 , "Please provide content image")
+        throw new ApiError(402 , "Please provide cover image")
     }
 
     const CoverImageUrl = await uploadOnCloudinary(coverimglocalpath)
@@ -41,6 +41,12 @@ const createPost = asyncHandler(async (req, res) => {
     return res.status(201).json(new ApiResponse(201, post, 'Post created successfully'));
 })
 
+const getPosts = asyncHandler(async (req, res) => {
+    const posts = await Card.find();
+    return res.status(200).json(new ApiResponse(200, posts, 'Posts fetched successfully'));
+});
+
 export {
-    createPost
+    createPost,
+    getPosts
 }
