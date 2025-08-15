@@ -6,18 +6,19 @@ import { uploadOnCloudinary, deleteFromCloudinary } from '../utils/cloudinary.js
 
 
 const createPost = asyncHandler(async (req, res) => {
-    const { content } = req.body;
+    const { content , title } = req.body;
     
 
-    if (!content) {
-        throw new ApiError(400, 'Content is required');
+    if (!content || !title) {
+        throw new ApiError(400, 'Content and title are required');
     }
 
     const Sr = await Card.countDocuments()
 
     const postData = {
         SrNo: Sr+1,
-        content
+        content,
+        title
     };
 
     const contentimglocalpath = req.files?.ContentImage[0]?.path
@@ -46,7 +47,24 @@ const getPosts = asyncHandler(async (req, res) => {
     return res.status(200).json(new ApiResponse(200, posts, 'Posts fetched successfully'));
 });
 
+const getpostbySrNo = asyncHandler(async (req, res) => {
+    const { id } = req.query;
+
+    if (!id) {
+        throw new ApiError(400, 'Post ID is required');
+    }
+
+    const post = await Card.findOne({ SrNo: id });
+
+    if (!post) {
+        throw new ApiError(404, 'Post not found');
+    }
+
+    return res.status(200).json(new ApiResponse(200, post, 'Post fetched successfully'));
+})
+
 export {
     createPost,
-    getPosts
+    getPosts,
+    getpostbySrNo
 }

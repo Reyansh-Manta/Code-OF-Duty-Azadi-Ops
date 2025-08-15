@@ -10,6 +10,7 @@ export default function CreatePost() {
     const [Posted, setPosted] = useState(false)
     const [mess, setmess] = useState(false)
     const [content, setcontent] = useState("")
+    const [title, setTitle] = useState("")
     const [ContentImage, setContentImage] = useState(null)
     const [CoverImage, setCoverImage] = useState(null)
 
@@ -18,6 +19,7 @@ export default function CreatePost() {
         try {
             const formData = new FormData();
             formData.append("content", content)
+            formData.append("title", title)
             formData.append("coverImage", CoverImage)
             formData.append("ContentImage", ContentImage)
             const response = await axios.post(`http://localhost:2002/api/v1/posts/post`,
@@ -63,6 +65,14 @@ export default function CreatePost() {
                 <p className={styles.title}>Post Your Content Here</p>
 
                 <form onSubmit={submiitt}>
+
+                    <div className={styles.con}>
+                        <label className={`${styles.labeltitle} ${styles.label}`} htmlFor="title">Title</label>
+                        <textarea className={`${styles.inputContent} ${styles.input}`} id="title" placeholder="Enter the title" required
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}></textarea>
+                    </div>
+
                     <div className={styles.con}>
                         <label className={`${styles.labelContent} ${styles.label}`} htmlFor="content">Content</label>
                         <textarea className={`${styles.inputContent} ${styles.input}`} id="content" placeholder="Enter the content" required
@@ -75,7 +85,7 @@ export default function CreatePost() {
                             onChange={(e) => setCoverImage(e.target.files[0])} />
                     </div>
                     <div className={styles.conimg}>
-                        <label className={`${styles.labelContent} ${styles.label}`} htmlFor="cover">ContentImage</label>
+                        <label className={`${styles.labelContent} ${styles.label}`} htmlFor="contentimg">ContentImage</label>
                         <input type="file" className={`${styles.inputContentimg} ${styles.input}`} id="contentimg" required
                             onChange={(e) => setContentImage(e.target.files[0])} />
                     </div>

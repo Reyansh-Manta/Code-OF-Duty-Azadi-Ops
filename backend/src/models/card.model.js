@@ -6,6 +6,10 @@ const CardSchema = new Schema({
             type: Number,
             required: true
         },
+        title:{
+            type: String,
+            required: true
+        },
         CoverImage:{
             type: String,
             required: true

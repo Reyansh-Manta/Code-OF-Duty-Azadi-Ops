@@ -1,6 +1,6 @@
 import { upload } from "../middleware/multer.middleware.js"
 import { Router } from "express";
-import { createPost, getPosts } from "../controllers/card.controller.js";
+import { createPost, getPosts, getpostbySrNo } from "../controllers/card.controller.js";
 
 const router = Router()
 
@@ -16,6 +16,7 @@ router.route("/post").post(upload.fields([
 ]),
     createPost)
 
-router.route("/getposts").get(getPosts)    
+router.route("/getposts").get(getPosts)
+router.route("/getpostbyid").get(getpostbySrNo)
 
 export default router

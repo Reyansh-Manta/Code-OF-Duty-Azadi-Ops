@@ -5,9 +5,9 @@ import styles from "./events.module.css";
 import Navbar from "../components/Navbar/page";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
-export default function LocalFeedPage() {
-    const [sort, setsort] = useState("new")
+export default function EventsPage() {
     const [fetchposts, setfetchposts] = useState([false])
     const [posts, setPosts] = useState([])
     const router = useRouter()
@@ -26,7 +26,7 @@ export default function LocalFeedPage() {
             }
         }
         fetchData()
-    }, [sort])
+    }, [])
 
     if (fetchposts) {
 
@@ -46,13 +46,16 @@ export default function LocalFeedPage() {
                     </div>
 
                     {posts.map((post) => (
-                        // <div><h1>hi</h1>
+                        
                         <div className={styles.container} key={post.id}>
+                            <a className={styles.link} href={`/event?id=${post.SrNo}`} >
                             <div className={styles.incont}>
-                                <img src={post.CoverImage} alt="" style={{}} />
+                                <img src={post.CoverImage} alt="" style={{width: "270px" , height: "320px"}} />
                             </div>
+                            <p className={styles.title}>{post.title}</p>
+                            </a>
                         </div>
-                        // </div>
+                        
                     ))}
 
                 </div>
